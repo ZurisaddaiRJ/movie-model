@@ -7,7 +7,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 origins = ["*"]
 
-app = FastAPI(title = 'Movie Success Rate Prediction')
+app = FastAPI(title = 'Heart Disease Prediction')
 
 app.add_middleware(
    CORSMiddleware,
@@ -20,7 +20,7 @@ app.add_middleware(
 model = load(pathlib.Path('model/movie_success_rate_v1.joblib'))
 
 class InputData(BaseModel):
-    Year:int=2008
+    
     Rating:int=7
     Votes:int=757074
     Metascore:int=70
@@ -44,7 +44,7 @@ class InputData(BaseModel):
     War:int=0
     Western:int=0
     Success:int=1
-    
+
 class OutputData(BaseModel):
     score:float=0.80318881046519
 
@@ -54,4 +54,3 @@ def score(data:InputData):
     result = model.predict_proba(model_input)[:,-1]
 
     return {'score':result}
-
