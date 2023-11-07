@@ -1,7 +1,7 @@
 import requests
 body = {
   "Year": 2008,
-  "Rating": 7,
+  "Rating": 10,
   "Votes": 757074,
   "Metascore": 70,
   "Action": 1,
