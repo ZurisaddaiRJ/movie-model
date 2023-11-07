@@ -20,7 +20,7 @@ app.add_middleware(
 model = load(pathlib.Path('model/movie_success_rate_v1.joblib'))
 
 class InputData(BaseModel):
-    Year: int =2008,
+    Year: int =2008
     Rating:int=7
     Votes:int=757074
     Metascore:int=70
