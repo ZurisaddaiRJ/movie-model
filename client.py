@@ -22,8 +22,7 @@ body = {
   "Sport": 0,
   "Thriller": 1,
   "War": 0,
-  "Western": 0,
-  "Success": 1
+  "Western": 0
 }
 
 response = requests.post(url= 'http://127.0.0.1:8000/score', json=body)
